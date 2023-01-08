@@ -1,3 +1,8 @@
+/* 
+* Name: Pun VireakRoth
+* Class: ITE M3
+* Array Search
+*/
 #include <iostream>
 using namespace std;
 
@@ -7,6 +12,7 @@ int main() {
     cout << "What number you want to search: " << endl;
     int num;
     cin >> num;
+    // loop to see if the elemen match with array index
     for(int i = 0; i < arrLen; i++) {
         if(myArr[i] == num) {
             cout << "Your number is found at " << i + 1 << " index of array" << endl; 
