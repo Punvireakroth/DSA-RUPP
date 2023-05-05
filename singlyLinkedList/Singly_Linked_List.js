@@ -11,11 +11,24 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
+  // Push to the end of linked list
+  push(val) {
+    let newNode = new Node(val);
+    // check if node is empty
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    return this;
+  }
 }
 
-// let first = new Node("Hi");
-// first.next = new Node("There");
-// first.next.next = new Node("How");
-// first.next.next.next = new Node("Are");
-// first.next.next.next.next = new Node("You");
-// console.log(first);
+let list = new SinglyLinkedList();
+
+console.log(list.push(10));
+console.log(list.push(20));
+console.log(list.push(30));
